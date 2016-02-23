@@ -2,10 +2,6 @@ class ArtworksController < ApplicationController
 
   before_action :set_artwork, only: [:show, :edit, :update, :destroy]
 
-  validates :name, presence: true
-  validates :user, presence: true
-  validates :genre, presence: true
-
   def index
     @artwork = Artwork.all
   end

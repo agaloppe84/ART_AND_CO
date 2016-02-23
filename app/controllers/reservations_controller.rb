@@ -1,8 +1,4 @@
 class ReservationsController < ApplicationController
-  validates :start_date, presence: true
-  validates :end_date, presence: true
-  validates :artwork, presence: true
-  validates :user, presence: true
 
   def index
     @reservations = Reservation.all
