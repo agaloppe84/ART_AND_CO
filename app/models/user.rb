@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable
   has_many :artworks, through: :reservations
+  has_many :reservations
 end
