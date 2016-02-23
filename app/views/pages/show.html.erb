@@ -1,0 +1,21 @@
+
+
+
+<% show %>
+
+
+ <h1>listing artworks</h1>
+
+
+<% @artworks.each do |art| %>
+
+   <h3><%=  art.name, art.description %></h3>
+
+   <h3><%= art.description %></h3>
+
+   <h3><%= art.genre, art.price %></h3>
+<% end %>
+
+
+
+  <%= link_to "depot"
