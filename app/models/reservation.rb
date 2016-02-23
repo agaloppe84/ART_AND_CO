@@ -1,4 +1,4 @@
 class Reservation < ActiveRecord::Base
-  has_one :user
-  has_one :artwork
+  belongs_to :user
+  belongs_to :artwork
 end
