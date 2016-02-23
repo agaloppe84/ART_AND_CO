@@ -19,12 +19,20 @@ class ArtworksController < ApplicationController
 
   def create
     @artwork = Artwork.new(artwork_params)
-    @artwork.save
+    if @artwork.save
+      redirect_to artwork_path(@artwork)
+    else
+      render :new
+    end
     # Will raise ActiveModel::ForbiddenAttributesError
   end
 
   def update
-    @artwork.update(artwork_params)
+    if @artwork.update(artwork_params)
+      redirect_to artwork_path(@artwork)
+    else
+      render :edit
+    end
     # Will raise ActiveModel::ForbiddenAttributesError
   end
 
