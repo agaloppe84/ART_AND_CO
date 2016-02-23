@@ -3,4 +3,3 @@ class ArtworksController < ApplicationController
   validates :user_id, presence: true
   validates :genre, presence: true
 end
-end
