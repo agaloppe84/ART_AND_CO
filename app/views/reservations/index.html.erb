@@ -5,7 +5,7 @@
     <p>Begin on = <%= reservation.start_date %></p>
     <p>End on = <%= reservation.end_date %></p>
     <p>Price = <%= reservation.artwork.price %> €</p>
-    <h5><%= link_to "see resa", reservation_path(reservation) %></h5>
+    <h5><%= link_to "see resa", reservation_path(reservation),class: "btn btn-primary" %></h5>
   </div>
 <% end %>
 

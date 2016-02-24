@@ -1,0 +1,6 @@
+<div class="container text-center">
+    <h4><%= @artwork.name %> / <%= @artwork.genre %></h4>
+    <p><%= @artwork.description %></p>
+    <p>Price = <%= @artwork.price %> €</p>
+    <h5><%= link_to "back", artworks_path, class: "btn btn-primary" %></h5>
+</div>
