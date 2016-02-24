@@ -1,0 +1,9 @@
+
+ <div class="container text-center">
+    <h4>Resa/<%= @reservation.user_id %></h4>
+    <h5><%= @reservation.artwork.name %> / <%= @reservation.artwork.genre %></h5>
+    <p>Begin on = <%= @reservation.start_date %></p>
+    <p>End on = <%= @reservation.end_date %></p>
+    <p>Price = <%= @reservation.artwork.price %> €</p>
+    <h5><%= link_to "back", reservations_path %></h5>
+</div>
