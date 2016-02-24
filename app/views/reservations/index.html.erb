@@ -1,0 +1,11 @@
+<h3 class="text-center">My reservations</h3>
+<% @reservations.each do |reservation| %>
+  <div class="text-center">
+    <h5><%= reservation.artwork.name %> / <%= reservation.artwork.genre %></h5>
+    <p>Begin on = <%= reservation.start_date %></p>
+    <p>End on = <%= reservation.end_date %></p>
+    <p>Price = <%= reservation.artwork.price %> €</p>
+    <h5><%= link_to "see resa", reservation_path(reservation) %></h5>
+  </div>
+<% end %>
+
