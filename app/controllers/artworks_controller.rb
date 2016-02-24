@@ -3,7 +3,7 @@ class ArtworksController < ApplicationController
   before_action :set_artwork, only: [:show, :edit, :update, :destroy]
 
   def index
-    @artwork = Artwork.all
+    @artworks = Artwork.all
   end
 
   def show
