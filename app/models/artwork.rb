@@ -7,4 +7,8 @@ class Artwork < ActiveRecord::Base
   has_many :users, through: :reservations
 
   mount_uploader :picture, PhotoUploader
+
+  def self.genres
+    ["painting", "sculpture", "photography"]
+  end
 end
