@@ -4,7 +4,7 @@ class Artwork < ActiveRecord::Base
   validates :genre, presence: true
   belongs_to :user
   has_many :reservations
-  has_many :users, through: :reservations
+  # has_many :users, through: :reservations
 
   mount_uploader :picture, PhotoUploader
 
