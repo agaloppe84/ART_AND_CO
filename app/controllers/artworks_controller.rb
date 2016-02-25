@@ -4,9 +4,15 @@ class ArtworksController < ApplicationController
 
   def index
     @artworks = Artwork.all
+    @markers = Gmaps4rails.build_markers(@flats) do |flat, marker|
+      marker.lat flat.latitude
+      marker.lng flat.longitude
+    end
   end
 
   def show
+    @artwork = Artwork.find(params[:id])
+    @artwork_coordinates = { lat: @artwork.lat, lng: @artwork.lartwork }
   end
 
   def new
