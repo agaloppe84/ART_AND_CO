@@ -1,5 +1,6 @@
 User.destroy_all
 Reservation.destroy_all
+
 Artwork.destroy_all
 
 puts "Seed started"
@@ -19,7 +20,6 @@ sabrina  = User.create(email: "sabrina@gmail.com", password: "1234apollo")
 laura    = User.create(email: "laura@gmail.com",   password: "1234gemini")
 
 # ------------------------------------------------------------------------ #
-
 
 puts "Seeding Artworks"
 
@@ -73,7 +73,7 @@ manneken_pis = Artwork.create!(name: "Manneken Pis",
 # ------------------------------ reservations ----------------------------- #
 puts "Seeding Reservations"
 
-resa1 = the_thinker.reservations.create!(start_date: Date.today - 4.days, end_date: Date.today + 4.days, user: michel)
+resa1 = the_thinker.reservations.create!(start_date: Date.today - 4.days, end_date: Date.today + 4.days, user: david)
 resa2 = venus_de_milo.reservations.create!(start_date: Date.today, end_date: Date.today + 4.days, user: david)
 resa3 = dora_maar_au_chat.reservations.create!(start_date: Date.today + 2.days, end_date: Date.today + 10.days, user: robert)
 resa4 = triptyque.reservations.create!(start_date: Date.today + 12.days, end_date: Date.today + 18.days, user: martin)

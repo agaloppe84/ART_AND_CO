@@ -19,9 +19,11 @@ class ArtworksController < ApplicationController
 
   def create
     @artwork = Artwork.new(artwork_params)
+    @artwork.user = current_user
     if @artwork.save
       redirect_to artwork_path(@artwork)
     else
+      Rails.logger.info(@artwork.errors.full_messages)
       render :new
     end
     # Will raise ActiveModel::ForbiddenAttributesError
