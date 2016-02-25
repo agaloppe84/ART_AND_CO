@@ -12,7 +12,7 @@ class ArtworksController < ApplicationController
 
   def show
     @artwork = Artwork.find(params[:id])
-    @artwork_coordinates = { lat: @artwork.lat, lng: @artwork.lartwork }
+    @artwork_coordinates = { lat: @artwork.latitude, lng: @artwork.longitude }
   end
 
   def new
