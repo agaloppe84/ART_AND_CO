@@ -1,0 +1,14 @@
+<h3 class="text-center">My account</h3>
+
+<% @reservations.each do |reservation| %>
+<hr>
+  <h5>reservation n°= <%= reservation.user_id %>-
+  <%= reservation.start_date %>
+  </h5>
+  <h5><%= reservation.artwork.name %>
+  <%= reservation.artwork.genre %>
+  <%= reservation.artwork.price %>€
+  </h5>
+  <h4><%= link_to "see resa", reservation_path(reservation),class: "btn btn-primary" %></h4>
+
+<% end %>
