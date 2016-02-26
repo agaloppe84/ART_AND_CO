@@ -16,10 +16,10 @@
       <%= link_to artwork do %>
         <div class="col-xs-12 col-sm-4">
           <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= artwork.picture.url %>)">
-            <div class="card-category">Popular</div>
+            <div class="card-category"><%= artwork.genre %></div>
             <div class="card-description">
-              <h2>Some stuff</h2>
-              <p>Very cool stuff, useful and smart</p>
+              <h2><%= artwork.user.first_name %> <%= artwork.user.last_name %></h2>
+              <p><%= artwork.price %></p>
             </div>
             <img class="card-user avatar" src="http://icons.iconarchive.com/icons/hopstarter/halloween-avatars/128/Casper-icon.png">
           </div>

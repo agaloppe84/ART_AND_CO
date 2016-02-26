@@ -29,22 +29,22 @@ puts "   -- Seeding Paintings"
 la_joconde = Artwork.create!(name: "la joconde",
   description: "La Joconde est un tableau de l'artiste italien Léonard de Vinci",
   price: 30_000, genre: "painting", user: michel,
-   address: "1000 5th Ave, New York, NY 10028, États-Unis")
+   address: "1000 5th Ave, New York, NY 10028, États-Unis", picture: File.open("app/assets/images/test.jpg"))
 
 turquoise_marilyn = Artwork.create!(name: "Turquoise Marilyn",
   description: "Turquoise Marilyn par Andy Warhol",
   price: 3_000_000, genre: "painting", user: nicolas, address: "82 Rue Brûle Maison,
-   59000 Lille")
+   59000 Lille", picture: File.open("app/assets/images/test1.jpg"))
 
 triptyque = Artwork.create!(name: "Triptyque",
   description: "Triptyque par Francis Bacon",
   price: 58_000_000, genre: "painting", user: robert, address: "5 Taylor St, San Francisco,
-   CA 94102, États-Unis" )
+   CA 94102, États-Unis", picture: File.open("app/assets/images/test2.jpg") )
 
 dora_maar_au_chat = Artwork.create!(name: "Dora Maar au Chat",
   description: "Dora Maar au Chat par Pablo Picasso",
   price: 65_000_000, genre: "painting", user: martin, address: "3 Chome-1-1 Kudankita, Chiyoda,
-   Tokyo 102-8246, Japon" )
+   Tokyo 102-8246, Japon", picture: File.open("app/assets/images/test3.jpg") )
 
 # ------------------------------------------------------------------------ #
 
@@ -57,22 +57,22 @@ puts "Seeding Sculptures"
 venus_de_milo = Artwork.create!(name: "Venus de Milo",
   description: "Sculptor: Alezandros of Antioch",
   price: 47_000_000, genre: "sculpture", user: benoit, address: "56 Hope Road Kingston 6 Hope Rd,
-   Kingston, Jamaïque" )
+   Kingston, Jamaïque", picture: File.open("app/assets/images/test4.jpg") )
 
 the_thinker = Artwork.create!(name: "The Thinker",
   description: "Sculptor: Auguste Rodin",
   price: 67_000_000, genre: "sculpture", user: david, address: "Fintry,
-   Glasgow, Lanarkshire G63 0LW, Royaume-Uni")
+   Glasgow, Lanarkshire G63 0LW, Royaume-Uni", picture: File.open("app/assets/images/test5.jpg"))
 
 pieta = Artwork.create!(name: "Pieta",
   description: "Pieta is a marble structure shaped up by Michelangelo Buonarroti ",
   price: 36_000_000, genre: "sculpture", user: julie, address: "Broadway Blvd & Chicago Ave, Cape Town,
-   7139, Afrique du Sud" )
+   7139, Afrique du Sud", picture: File.open("app/assets/images/test1.jpg") )
 
 manneken_pis = Artwork.create!(name: "Manneken Pis",
   description: "The Little man pee, commonly known as Manneken Pis",
   price: 67_000_000, genre: "sculpture", user: marie, address: "Albert Cuypstraat 25,
-   1072 CK Amsterdam, Pays-Bas" )
+   1072 CK Amsterdam, Pays-Bas", picture: File.open("app/assets/images/test2.jpg") )
 
 # ------------------------------------------------------------------------ #
 
