@@ -8,6 +8,7 @@
         <%= f.input :description, label: 'Description' %>
         <%= f.input :price, label: 'Your price'%>
         <%= f.input :genre, collection: Artwork.genres, as: :radio_buttons, checked: Artwork.genres.first %>
+        <%= f.input :address %>
         <%= f.input :picture %>
         <%= f.input :picture_cache, as: :hidden %>
         <%= f.button :submit %>

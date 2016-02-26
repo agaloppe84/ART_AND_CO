@@ -1,37 +1,42 @@
 <div class="container text-center">
-  <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
-      <h3>Artworks : <%= @artwork.name %> / <%= @artwork.genre %></h3>
-      <p><%= cl_image_tag @artwork.picture, width: "450x450" %></p>
-      <p><%= @artwork.description %></p>
-      <p>Price = <%= @artwork.price %> €</p>
-      <h5><%= link_to "back", artworks_path, class: "btn btn-primary" %></h5>
-    </div>
-  </div>
+    <h4><%= @artwork.name %> / <%= @artwork.genre %></h4>
+    <p><%= @artwork.description %></p>
+    <p>Price = <%= @artwork.price %> €</p>
+    <h5><%= link_to "back", artworks_path, class: "btn btn-primary" %></h5>
 </div>
 
+<!-- <div class="container text-center">
+  <div class="row">
+      <div class="col-xs-6 col-md-12">
+        <% content_for(:after_js) do %>
+          <%= javascript_tag do %>
+            $(document).ready(function() {
+              var coord = <%= raw @artwork_coordinates %>;
+              alert('Artwork coordinates are ' + coord.latitude + ', ' + coord.longitude);
+            });
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+</div> -->
 
-<% content_for(:after_js) do %>
-  <%= javascript_tag do %>
-    $(document).ready(function() {
-      var coord = <%= raw @artwork_coordinates %>;
-      alert('Artwork coordinates are ' + coord.lat + ', ' + coord.lng);
-    });
-  <% end %>
-<% end %>
+<div class="container text-center">
+  <div class="row" style="padding-bottom: 50px;">
+      <div class="col-xs-12 col-md-12">
+          <div id="map" style="width: 100%; height: 400px;"></div>
+          <% content_for(:after_js) do %>
+            <%= javascript_tag do %>
+              $(document).on('ready', function() {
+                handler = Gmaps.build('Google');
+                handler.buildMap({ internal: { id: 'map' } }, function(){
+                  markers = handler.addMarkers(<%= raw @markers.to_json %>);
+                  handler.bounds.extendWith(markers);
+                  handler.fitMapToBounds();
+                });
+              })
+            <% end %>
+          <% end %>
+      </div>
+    </div>
+</div>
 
-
-<div id="map" style="width: 100%; height: 600px;"></div>
-
-<% content_for(:after_js) do %>
-  <%= javascript_tag do %>
-    $(document).on('ready', function() {
-      handler = Gmaps.build('Google');
-      handler.buildMap({ internal: { id: 'map' } }, function(){
-        markers = handler.addMarkers(<%= raw @markers.to_json %>);
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-      });
-    })
-  <% end %>
-<% end %>

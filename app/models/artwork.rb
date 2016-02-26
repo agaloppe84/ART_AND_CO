@@ -7,6 +7,7 @@ class Artwork < ActiveRecord::Base
   # has_many :users, through: :reservations
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
+
   mount_uploader :picture, PhotoUploader
 
   def self.genres
