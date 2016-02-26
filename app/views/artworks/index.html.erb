@@ -1,9 +1,12 @@
-<h3 class="text-center">Artworks</h3>
+<h2 class="text-center myfontsetup">Artworks</h2>
+<hr>
 <% @artworks.each do |artwork| %>
   <div class="text-center">
-    <h5><%= artwork.name %> / <%= artwork.genre %></h5>
-    <p><%= artwork.description %></p>
+    <h5 class="myfontsetup2"><%= artwork.name %></h5>
+    <h5 class="myfontsetupgenres"><%= artwork.genre %></h5>
+    <p class="myfontsetup3"><%= artwork.description %></p>
     <p>Price = <%= artwork.price %> €</p>
-    <h5><%= link_to "see details", artwork_path(artwork),class: "btn btn-primary" %></h5>
+    <h5><%= link_to "see details", artwork_path(artwork),class: "mybackbutton" %></h5>
+    <hr>
   </div>
 <% end %>
