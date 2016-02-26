@@ -12,43 +12,19 @@
 
 <div class="wrapper">
   <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.unitychristian.org/wp-content/uploads/2016/01/Art-Show.jpg');">
-        <div class="card-category">Popular</div>
-        <div class="card-description">
-          <h2>Some stuff</h2>
-          <p>Very cool stuff, useful and smart</p>
+    <% @artworks.each do |artwork| %>
+      <%= link_to artwork do %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= artwork.picture.url %>)">
+            <div class="card-category">Popular</div>
+            <div class="card-description">
+              <h2>Some stuff</h2>
+              <p>Very cool stuff, useful and smart</p>
+            </div>
+            <img class="card-user avatar" src="http://icons.iconarchive.com/icons/hopstarter/halloween-avatars/128/Casper-icon.png">
+          </div>
         </div>
-        <img class="card-user avatar" src="http://icons.iconarchive.com/icons/hopstarter/halloween-avatars/128/Casper-icon.png">
-        <a class="card-link" href="#" ></a>
-      </div>
-    </div>
-
-
-    <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.suchablog.com/wp-content/uploads/2011/12/street-art-2011_71.jpg');">
-        <div class="card-category">Popular</div>
-        <div class="card-description">
-          <h2>Some stuff</h2>
-          <p>Very cool stuff, useful and smart</p>
-        </div>
-        <img class="card-user avatar" src="http://icons.iconarchive.com/icons/hopstarter/halloween-avatars/128/Casper-icon.png">
-        <a class="card-link" href="#" ></a>
-      </div>
-    </div>
-
-
-    <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.ka-net.org.uk/files/images/art-logo.jpg');">
-        <div class="card-category">Popular</div>
-        <div class="card-description">
-          <h2>Some stuff</h2>
-          <p>Very cool stuff, useful and smart</p>
-        </div>
-        <img class="card-user avatar" src="http://icons.iconarchive.com/icons/hopstarter/halloween-avatars/128/Casper-icon.png">
-        <a class="card-link" href="#" ></a>
-      </div>
-    </div>
-
+      <% end %>
+    <%end%>
   </div>
 </div>
