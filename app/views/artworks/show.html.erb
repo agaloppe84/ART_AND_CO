@@ -25,6 +25,8 @@
     <p><%= cl_image_tag @artwork.picture, width: "450x450" %></p>
     <p><%= @artwork.description %></p>
     <p class="myfontsetupprices">Price = <%= @artwork.price %> €</p>
+    <h5><%= link_to "book this artwork", new_reservation_path, class: "mybackbutton" %></h5>
+    <hr>
     <h5><%= link_to "back", artworks_path, class: "mybackbutton" %></h5>
   </div>
 </div>

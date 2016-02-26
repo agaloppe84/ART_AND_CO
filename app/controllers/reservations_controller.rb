@@ -13,13 +13,19 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.new(params[:reservation])
+    @reservation = Reservation.new(reservation_params)
     @reservation.save
-    redirect_to reservation_path(@reservation)
+    redirect_to dashboard_path
   end
 
   def edit
     @reservation = Reservation.find(params[:id])
+  end
+
+  private
+
+  def reservation_params
+    params.require(:reservation).permit
   end
 
 end

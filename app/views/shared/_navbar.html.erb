@@ -10,6 +10,8 @@
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
 
+    <h3 class="navbar-wagon-item myfontsetup3">- <%= current_user.first_name %> <%= current_user.last_name %> -</h3>
+
       <!-- Notification
       <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
         <div class="badge-container">
