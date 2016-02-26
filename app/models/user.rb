@@ -7,6 +7,6 @@ class User < ActiveRecord::Base
 
   has_many :artworks
   has_many :reservations
-  has_many :artworks, through: :reservations
+  has_many :reserved_artworks, through: :reservations, source: :artworks
 
 end
