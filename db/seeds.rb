@@ -8,16 +8,16 @@ puts "Seed started"
 # -------------------------------- Users --------------------------------- #
 puts "Seeding Users"
 
-michel   = User.create(email: "michel@gmail.com",  password: "1234soleil")
-david    = User.create(email: "david@gmail.com",   password: "1234lune")
-robert   = User.create(email: "robert@gmail.com",  password: "1234venus")
-martin   = User.create(email: "martin@gmail.com",  password: "1234saturn")
-benoit   = User.create(email: "benoit@gmail.com",  password: "1234jupiter")
-nicolas  = User.create(email: "nicolas@gmail.com", password: "1234pluton")
-julie    = User.create(email: "julie@gmail.com",   password: "1234charon")
-marie    = User.create(email: "marie@gmail.com",   password: "1234mercure")
-sabrina  = User.create(email: "sabrina@gmail.com", password: "1234apollo")
-laura    = User.create(email: "laura@gmail.com",   password: "1234gemini")
+michel   = User.create(first_name: "michel", last_name: "patoudatchi", email: "michel@gmail.com",  password: "1234soleil")
+david    = User.create(first_name: "david", last_name: "rodriguez", email: "david@gmail.com",   password: "1234lune")
+robert   = User.create(first_name: "robert", last_name: "cousin", email: "robert@gmail.com",  password: "1234venus")
+martin   = User.create(first_name: "martin", last_name: "malinvaud", email: "martin@gmail.com",  password: "1234saturn")
+benoit   = User.create(first_name: "benoit", last_name: "weedow", email: "benoit@gmail.com",  password: "1234jupiter")
+nicolas  = User.create(first_name: "nicolas", last_name: "lamarche", email: "nicolas@gmail.com", password: "1234pluton")
+julie    = User.create(first_name: "julie", last_name: "bouillet", email: "julie@gmail.com",   password: "1234charon")
+marie    = User.create(first_name: "marie", last_name: "lafont", email: "marie@gmail.com",   password: "1234mercure")
+sabrina  = User.create(first_name: "sabrina", last_name: "peperoni", email: "sabrina@gmail.com", password: "1234apollo")
+laura    = User.create(first_name: "laura", last_name: "chadezbec", email: "laura@gmail.com",   password: "1234gemini")
 
 # ------------------------------------------------------------------------ #
 
