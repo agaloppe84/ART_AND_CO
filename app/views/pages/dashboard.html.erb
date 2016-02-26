@@ -13,7 +13,7 @@
   <span class="myfontsetup2"><%= reservation.artwork.name %></span>
   <span class="label label-warning"><%= reservation.artwork.genre %></span>
   <h5 class="myfontsetup3"><%= reservation.artwork.price %>€</h5>
-  <h3><%= link_to "see resa", reservation_path(reservation),class: "mybackbutton" %></h3>
+  <h3><%= link_to "see reservation", reservation_path(reservation),class: "mybackbutton" %></h3>
 
 
 <% end %>
@@ -33,7 +33,7 @@
   <span class="myfontsetup2"><%= artwork.name %></span>
   <span class="label label-warning"><%= artwork.genre %></span>
   <h5 class="myfontsetup3"><%= artwork.price %>€</h5>
-  <h3><%= link_to "see resa", artwork_path(artwork),class: "mybackbutton" %></h3>
+  <h3><%= link_to "see artwork", artwork_path(artwork),class: "mybackbutton" %></h3>
 
 
 <% end %>
