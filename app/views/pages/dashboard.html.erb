@@ -1,14 +1,40 @@
-<h3 class="text-center">My account</h3>
+<h3 class="text-center myfontsetup">My account</h3>
+
+<h3 class="text-center myfontsetup3">My reservations</h3>
+
+
+<div class="text-center">
 
 <% @reservations.each do |reservation| %>
 <hr>
   <h5>reservation n°= <%= reservation.user_id %>-
   <%= reservation.start_date %>
   </h5>
-  <h5><%= reservation.artwork.name %>
-  <%= reservation.artwork.genre %>
-  <%= reservation.artwork.price %>€
-  </h5>
-  <h4><%= link_to "see resa", reservation_path(reservation),class: "btn btn-primary" %></h4>
+  <span class="myfontsetup2"><%= reservation.artwork.name %></span>
+  <span class="label label-warning"><%= reservation.artwork.genre %></span>
+  <h5 class="myfontsetup3"><%= reservation.artwork.price %>€</h5>
+  <h3><%= link_to "see resa", reservation_path(reservation),class: "mybackbutton" %></h3>
+
 
 <% end %>
+</div>
+
+
+
+<hr>
+<h3 class="text-center myfontsetup3">My artworks</h3>
+
+
+<div class="text-center">
+
+<% @artworks.each do |artwork| %>
+<hr>
+  </h5>
+  <span class="myfontsetup2"><%= artwork.name %></span>
+  <span class="label label-warning"><%= artwork.genre %></span>
+  <h5 class="myfontsetup3"><%= artwork.price %>€</h5>
+  <h3><%= link_to "see resa", artwork_path(artwork),class: "mybackbutton" %></h3>
+
+
+<% end %>
+</div>
