@@ -1,6 +1,57 @@
 // Place all the styles related to the Artworks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.myfontsetup {
+ font-weight: 200;
+ font-size: 32px;
+}
+
+.myfontsetup2 {
+ font-weight: 700;
+ font-size: 18px;
+}
+
+.myfontsetup3 {
+ font-weight: 300;
+ font-size: 16px;
+}
+
+
+.myfontsetupgenres {
+ font-weight: 300;
+ font-size: 16px;
+ color: #E94822;
+}
+
+.myfontsetupprices {
+ font-weight: 300;
+ font-size: 18px;
+ color: #537780;
+}
+
+.mybackbutton {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #303841;
+  font-weight: 400;
+  font-size: 14px;
+  color: #303841;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 25px;
+
+  &:hover {
+    font-weight: 700;
+    font-size: 14px;
+    color: #E94822;
+    text-decoration: none;
+    border-color: #E94822;
+  }
+}
 
 
 
